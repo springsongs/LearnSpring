@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+    <bean id="serviceA" class="io.github.springsongs.ServiceA">
+        <property name="description" value="serviceA"></property>
+    </bean>
+
+    <bean id="serviceB" class="io.github.springsongs.ServiceB">
+        <property name="description" value="serviceB"></property>
+    </bean>
+
+    <bean id="serviceC" class="io.github.springsongs.ServiceB">
+        <property name="description" value="serviceC"></property>
+    </bean>
+
+    <bean id="serviceD" class="io.github.springsongs.ServiceC" autowire="byName"></bean>
+    
+    <bean id="serviceE" class="io.github.springsongs.ServiceC" autowire="byName">
+        <property name="serviceB" ref="serviceC"></property>
+    </bean>
+
+</beans>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+    <bean id="otherInject" class="io.github.springsongs.OtherInject">
+        <property name="list">
+            <list>
+                <value>java</value>
+                <value>go</value>
+                <value>python</value>
+            </list>
+        </property>
+        <property name="set">
+            <set>
+                <value>apple</value>
+                <value>huawei</value>
+                <value>google</value>
+            </set>
+        </property>
+        <property name="map">
+            <map>
+                <entry key="001" value="taobao"></entry>
+                <entry key="002" value="tmall"></entry>
+                <entry key="003" value="koubei"></entry>
+            </map>
+        </property>
+        <property name="intArr">
+            <array>
+                <value>1</value>
+                <value>2</value>
+                <value>3</value>
+            </array>
+        </property>
+        <property name="properties">
+            <props>
+                <prop key="001">spring</prop>
+                <prop key="002">springboot</prop>
+                <prop key="003">springcloud</prop>
+            </props>
+        </property>
+    </bean>
+
+</beans>

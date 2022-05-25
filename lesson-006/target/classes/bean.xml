@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+    <bean id="studentEntity" class="io.github.springsongs.StudentEntity">
+        <property name="name" value="springsongs"></property>
+        <property name="age" value="28"></property>
+    </bean>
+    <bean id="teacherEntity" class="io.github.springsongs.TeacherEntity">
+        <property name="name" value="陈教授"></property>
+        <constructor-arg index="0" ref="studentEntity">
+        </constructor-arg>
+        <constructor-arg index="1">
+            <bean id="classEntity" class="io.github.springsongs.ClassEntity">
+                <property name="name" value="计算机大班"></property>
+            </bean>
+        </constructor-arg>
+    </bean>
+</beans>

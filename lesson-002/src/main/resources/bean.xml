@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+    <bean id="userEntity1" class="io.github.springsongs.UserEntity"/>
+    <bean id="userEntity2" class="io.github.springsongs.UserEntity"/>
+    <bean id="userEntity3" name="userEntity3-1" class="io.github.springsongs.UserEntity"/>
+    <bean id="userEntity4" name="userEntity4-1,userEntity4-2,userEntity4-3" class="io.github.springsongs.UserEntity"/>
+    <bean name="userEntity5,userEntity5-1,userEntity5-2,userEntity5-3" class="io.github.springsongs.UserEntity"/>
+</beans>

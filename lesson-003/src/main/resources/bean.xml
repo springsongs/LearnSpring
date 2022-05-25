@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+    <bean id="createBeanByConstructor1" class="io.github.springsongs.UserEntity"/>
+    <bean id="createBeanByConstructor2" class="io.github.springsongs.UserEntity">
+        <constructor-arg index="0" value="我是通过有参枸造器构造的对象"></constructor-arg>
+        <constructor-arg index="1" value="男"></constructor-arg>
+    </bean>
+    <bean id="createBeanByConstructor3" class="io.github.springsongs.UserStaticFactory" factory-method="builderUser1"/>
+    <bean id="createBeanByConstructor4" class="io.github.springsongs.UserStaticFactory" factory-method="builderUser2">
+        <constructor-arg index="0" value="我是通过有参枸造器构造的对象"></constructor-arg>
+        <constructor-arg index="1" value="男"></constructor-arg>
+    </bean>
+    <bean id="createBeanByConstructor6" class="io.github.springsongs.UserFactory"></bean>
+    <bean id="createBeanByConstructor7" factory-bean="createBeanByConstructor6" factory-method="builderUser1"></bean>
+    <bean id="createBeanByConstructor8" factory-bean="createBeanByConstructor6" factory-method="builderUser2">
+        <constructor-arg index="0" value="我是通过有参枸造器构造的对象"></constructor-arg>
+        <constructor-arg index="1" value="男"></constructor-arg>
+    </bean>
+    <bean id="userFactoryBean" class="io.github.springsongs.UserFactoryBean"></bean>
+</beans>

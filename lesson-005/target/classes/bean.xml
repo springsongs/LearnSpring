@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+    <bean id="userEntity" class="io.github.springsongs.UserEntity">
+        <constructor-arg index="0" value="springsongs"></constructor-arg>
+        <constructor-arg index="1" value="28"></constructor-arg>
+    </bean>
+
+    <bean id="userEntity1" class="io.github.springsongs.UserEntity">
+        <constructor-arg index="0" value="springsongs"></constructor-arg>
+        <constructor-arg index="1" value="28"></constructor-arg>
+        <constructor-arg index="2" value="男"></constructor-arg>
+    </bean>
+
+    <bean id="userEntity2" class="io.github.springsongs.UserEntity">
+        <constructor-arg type="java.lang.String" value="springsongs"></constructor-arg>
+        <constructor-arg type="int" value="28"></constructor-arg>
+    </bean>
+
+    <bean id="userEntity3" class="io.github.springsongs.UserEntity">
+        <constructor-arg type="java.lang.String" value="springsongs"></constructor-arg>
+        <constructor-arg type="int" value="28"></constructor-arg>
+        <constructor-arg type="java.lang.String" value="男"></constructor-arg>
+    </bean>
+
+    <bean id="userEntity4" class="io.github.springsongs.UserEntity">
+        <constructor-arg name="userName" value="springsongs"></constructor-arg>
+        <constructor-arg name="age" value="28"></constructor-arg>
+        <constructor-arg name="gender" value="男"></constructor-arg>
+    </bean>
+
+    <bean id="userEntity5" class="io.github.springsongs.UserEntity">
+        <property name="userName" value="springsongs"></property>
+        <property name="age" value="28"></property>
+        <property name="gender" value="男"></property>
+    </bean>
+</beans>
